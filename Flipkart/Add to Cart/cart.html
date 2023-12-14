@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="CodeHim">
+  <title>Add to Cart</title>
+  <link rel="stylesheet" href="./cart.css">
+</head>
+<body>   
+  <main>
+    <header class="header">
+      <div class="container header__top">
+        <div class="header__cart">
+          <ul>
+            <li class="header__submenu" id="submenu">
+              <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24"><path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path></svg>Cart <span id="countNumberOfProduct">0</span></span></button>
+              <div id="shopping-cart" class="shopping-cart-container">
+                <table id="cart-content">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <p class="total-container" id="total-price"><span class="total">Total: $0</span></p>
+                <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+                <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </main>
+  <main class="container page-content">
+    <div class="grid" id="grid">
+      <div class="card">
+        <img class="img" class="img" src="/img/Image_1.jpg" class="card__image" alt="">
+        <div class="card__info">
+          <h4 class="card__title">Noise Icon Buzz Smartwatch</h4>
+          <p class="card__text">4.2* 1,56,566 Ratings & 13,256 Reviews</p>
+          <p class="card__price">$299</p>
+          <button class="card__btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="img" class="img" src="/img/Image_2.jpg" class="card__image" alt="">
+        <div class="card__info">
+          <h4 class="card__title">BoAt icon buzz smartwatch</h4>
+          <p class="card__text">3.8* 1,10,206 Ratings & 78,256 Reviews</p>
+          <p class="card__price">$2,499</p>
+          <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="img" class="img" src="/img/Image_3.jpg" class="card__image" alt="">
+        <div class="card__info">
+          <h4 class="card__title">Bolt icon buzz smartwatch</h4>
+          <p class="card__text">4.5* 50,50 Ratings & 10,126 Reviews</p>
+          <p class="card__price">$2,999</p>
+          <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="img" src="/img/Image_4.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">Casio icon buzz smartwatch</h4>
+          <p class="card__text">J4.1* 1,48,006 Ratings & 33,890 Reviews</p>
+          <p class="card__price">$3,999</p>
+          <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="img" src="/img/Image_5.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">TIMEX icon buzz smartwatch</h4>
+          <p class="card__text">4.0* 23,786 Ratings & 20,256 Reviews</p>
+          <p class="card__price">$2,899</p>
+          <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="img" src="/img/Image_6.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">Realme icon buzz smartwatch</h4>
+          <p class="card__text">4.3* 98,566 Ratings & 5,256 Reviews</p>
+          <p class="card__price">$1,799</p>
+          <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="img" src="/img/Image_7.jpg" alt="" class="card__image">
+        <div class="card__info">
+          <h4 class="card__title">APPLE icon buzz smartwatch</h4>
+          <p class="card__text">4.6* 2,56,566 Ratings & 98,256 Reviews</p>
+          <p class="card__price">$40,999</p>
+          <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script  src="/Add to Cart/script.js"></script>
+</body>
+</html>

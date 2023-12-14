@@ -1,0 +1,604 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="inddex2.js"></script>
+    <title>Flipkart</title>
+</head>
+<body>
+    <div class="mainContainer" id="mainContainer">
+        <div class="mynavbar">
+            <h2><a class="navbarBrand" href="#">Flipkart</a></h2>
+            <div class="navSearch">
+                <form class="navForm" role="search">
+                    <input class="" type="search" placeholder="Search" aria-label="Search">
+                    <button class="" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+            <ul class="item">
+                <li id="navLogin"><a class="navLogin" aria-current="page" onclick="openLoginForm()">Login</a></li>
+                <li><a href="#">Become a seller</a></li>
+                <li>
+                    <a class="navDropDown" href="#" role="button">More<i class="fa fa-sort-desc jitu" aria-hidden="true"></i></a>
+                </li>
+                <li class="navCart">
+                    <a class="navpad" href="/Add to Cart/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainLogin2" id="mainLogin">
+            <div class="leftimg">
+                <img class="img" src="img/flipkar_cover.jpg" alt="flipkar_cover">
+            </div>
+            <div class="rightLogin">
+                <div class="leaveLogin">
+                    <span onclick="document.getElementById('mainLogin').style.display = 'none'"  class="close" title="Close Login">&times;</span>
+                </div>
+                <div class="loginDesc">
+                    <h3>Login</h3>
+                    <p>Get Access to your Orders, Wishlist and recommendations</p>
+                </div>
+                <form class="form" action="login" method="post">
+                    <div class="login">
+                        <label for="enterEmail"><p>Enter Email/Mobile number</p></label><br><input type="text" name="enterMail" id="enterEmail" placeholder="+91 9568952089">
+                        <label for="enterPswd"><p>Enter Password</p></label><br><input type="password" name="enterPassword" id="enterPswd" placeholder="Enter password">
+                        <a href="#" id="frgtPswd" onclick="OpenfrgtPassw()">Forgot Password</a>
+                        <div class="frgotpasw" id="frgotpasw" onclick="document.getElementById('frgtPswd').style.display = 'none'">
+
+                            <label for="enterPswd"><p>Enter Password</p></label><br><input type="password" name="enterPassword" id="enterPswd" placeholder="Enter password">
+                            <label for="frgtEmail"><p>Enter your Email</p></label><br><input type="email" name="enterEmail" id="frgtEmail" placeholder="Enter your Regis. Email id or Phone">
+                            <label for="newPswd"><p>Enter New Password</p></label><br><input type="password" name="newPswd" id="newPswd">
+                        </div>
+
+                    </div>
+                    <div class="loginSignupBtn">
+                        <a class="border" href="login.php">Login</a>
+                        <a class="simple" onclick="openSignForm()" >Sign up</a>
+                    </div>
+                </form>
+    
+                <footer class="footer">
+                    <p>We no longer support login via Social accounts. To recover your old accounts please <a href="#">click here</a></p>
+                </footer>
+            </div>
+        </div>
+        <div class="mainSignUp2" id="mainSignUp">
+            <div class="leftimg">
+                <img class="img" src="img/flipkar_cover.jpg" alt="flipkar_cover">
+            </div>
+            <div class="rightSignUp">
+                <div class="leaveSignUp">
+                    <span onclick="document.getElementById('mainSignUp').style.display = 'none'"  class="close" title="Close Login">&times;</span>
+                </div>
+                <div class="SignUp">
+                    <form action="" method="post">
+                        <label for="name"><p>Enter Name: </p> </label><br><input type="text" name="uname" id="name" placeholder="Janes Bone"><br>
+                        <label for="phone"><p>Enter Phone  Number: </p></label><br><input type="text" name="uphno" id="phone" placeholder="+91 9568952089"><br>
+                        <label for="email"><p>Enter Email: </p> </label><br><input type="email" name="uemail" id="email" placeholder="janesone123@gmail.com"><br>
+                        <label for="pswd"><p>Enter Password: </p> </label><br><input type="email" name="upswd" id="pswd" placeholder="Enter Your Password"><br>
+                    </form>
+                </div>
+                <div id="hidden" class="hidden">
+                    <form class="BtnHidden" action="" method="post">
+                        <label for="otp"><p>Enter OTP: </p></label><br><input type="text" name="uotp" id="otp" placeholder="Enter Your OTP"><br>
+                    </form>
+                </div>
+                <div class="BtnSignUp">
+                    <a class="border" onclick="openOtp()">Save</a>
+                </div>
+            </div>
+        </div>
+        <div class="product" id="product">
+            <div class="filter">
+                <div class="logoFilter">
+                    <h2>Filters</h2>
+                </div>
+                <div class="priceFilter">
+                    <p>PRICE</p>
+                    <form action="#" method="get">
+                        <input type="range" id="price" name="price" min="1000" max="20000"><br>
+                    </form>
+                    <div class="minToMax">
+                        <select name="Min" id="Min">
+                            <option value="">Min</option>
+                            <option value="">₹1000</option>
+                            <option value="">₹5000</option>
+                            <option value="">₹10000</option>
+                            <option value="">₹15000</option>
+                            <option value="">₹20000</option>
+                        </select> <p class="id">to</p>
+                        <select name="" id="Max">
+                            <option value="">₹1000</option>
+                            <option value="">₹5000</option>
+                            <option value="">₹10000</option>
+                            <option value="">₹15000</option>
+                            <option value="">₹20000+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">BRAND</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form class="brandSearchItem" action="" method="get">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Noise</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Casio</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>boAt</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>TIMEX</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>realme</p></div>
+                                    <div class="rowWise"><a href="#">500 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">DIAL SHAPE</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <form class="dialShape" action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Circle</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Curved</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Contemporary</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Oval</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Rectangle</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Squre</p></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">DISCOUNT</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>40% or more</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>30% or more</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>20% or more</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>10% or more</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>10% and below</p></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">CUSTOMER RATINGS</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>4* & above</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>3* & above</p></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">STRAP COLOR</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <form class="brandSearch" action="">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input type="search" name="" placeholder="Search Brand">
+                                </form>
+                                <form action="">
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Aqua Blue</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Astro Navy</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Beiqe</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Black Titanium</p></div>
+                                    <div class="rowWise"><input type="checkbox" name="" id=""><p>Blue</p></div>
+                                    <div class="rowWise"><a href="#">36 more</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="productListWatch">
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+                <a class="forAllProduct" href="index2.html">
+                    <div class="imgPortion">
+                        <img src="img/Image_1.jpg" alt="Image not displed">
+                    </div>
+                    <div class="descPortion">
+                        <h3>Noise Icon Buzz BT Calling with 1.69" display , AI Voice Assistance, Built-In Games Smartwatch  (Black Strap, Regular)</h3>
+                        <p><span>4.2*</span>  1,56,566 Ratings & 13,256 Reviews</p>
+                        <ul class="Highlights">
+                            <li>1.69 TFT LCD Display</li>
+                            <li>In-Built Games|Bluetooth Calling</li>
+                            <li>Voice Assistance (AI voice assistance)</li>
+                            <li>Noise Health Suite|Weather Report</li>
+                            <li>Up to 7-Day Battery</li>
+                            <li>100+ Watch Faces|IP67 Waterproof</li>
+                            <li>With Call Function</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 7 days</li>
+                        </ul>
+                    </div>
+                    <div class="pricePortion">
+                        <div><h2>₹1,999</h2></div>
+                        <div><p><span class="originalPrice">₹4,999</span> <span class="offPercentage"> 60% off</span></p></div>
+                        <div><p>Free delivery</p></div>
+                        <div><h4>Bank offer</h4></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

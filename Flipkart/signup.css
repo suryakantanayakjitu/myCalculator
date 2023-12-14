@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+p{
+    margin: 0;
+}
+.mainSignUp{
+    background-color: white;
+    position:absolute;
+    width: 800px;
+    top: 25%;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    /* justify-content:center; */
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.13);
+    font-family:unset;
+    font-size:unset;
+    font-weight:unset;
+    line-height:unset;
+    color:unset;
+    text-align:unset ;
+}
+.img{
+    float: left;
+    width: 343px;
+    height: 398px;
+}
+.rightSignUp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px 0px 25px;
+}
+.rightSignUp .leaveSignUp{
+    display: flex;
+    flex-direction: row-reverse;
+    /* padding-bottom: 10px; */
+    cursor: pointer;
+}
+.rightSignUp .leaveSignUp span{
+    font-size:1.5rem;
+    padding: 10px 10px 0px 0px;
+    margin: 0;
+}
+.rightSignUp .SignUp, .hidden{
+    display: flex;
+    flex-direction: column;
+}
+.rightSignUp .SignUp p, .hidden p{
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+    color: rgba(17, 17, 17, 0.947);
+}
+.rightSignUp .SignUp input, .hidden input{
+    width: 80%;
+    padding: 6px 9px 6px 15px;
+    border-radius: 35px;
+    border: 1px solid #7f8c8d;
+    /* margin-bottom: 0px; */
+}
+.rightSignUp .SignUp input::placeholder, .hidden input::placeholder{
+    color:#7f8c8d;
+}
+.rightSignUp .hidden{
+    display: flex;
+    flex-direction: column;
+}
+.rightSignUp .hidden p{
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+    color: rgba(17, 17, 17, 0.947);
+}
+.rightSignUp .hidden input{
+    width: 80%;
+    padding: 6px 9px 6px 15px;
+    border-radius: 35px;
+    border: 1px solid #7f8c8d;
+}
+.rightSignUp .hidden input::placeholder{
+    color:#7f8c8d;
+}
+
+.rightSignUp .BtnSignUp{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+.rightSignUp .BtnSignUp a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.rightSignUp .BtnSignUp .border{
+    width: 100%;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid #7f8c8d;
+    background-color: rgb(27, 27, 245);
+    margin-left: 50px;
+    color: white;
+    margin-top: 5px;
+}

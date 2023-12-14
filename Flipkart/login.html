@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="login.css">
+    <script src="inddex2.js" async></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="mainLogin" id="mainLogin">
+        <div class="leftimg">
+            <img class="img" src="img/flipkar_cover.jpg" alt="flipkar_cover">
+        </div>
+        <div class="rightLogin">
+            <div class="leaveLogin">
+                <!-- <a href="#"><i id="cross" class="fa fa-times-circle-o" aria-hidden="true"></i></a> -->
+                <span onclick="document.getElementById('mainLogin').style.display='none'" class="close" title="Close Login">&times;</span>
+            </div>
+            <div class="loginDesc">
+                <h3>Login</h3>
+                <p>Get Access to your Orders, Wishlist and recommendations</p>
+            </div>
+            <form class="form" action="login" method="post">
+                <div class="login">
+                    <label for="enterEmail"><p>Enter Email/Mobile number</p></label><br><input type="text" name="enterMail" id="enterEmail" placeholder="+91 9568952089">
+
+                    <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
+
+                    <label for="enterPswd"><p>Enter Password</p></label><br><input type="password" name="enterPassword" id="enterPswd" placeholder="Enter password">
+                </div>
+                <div class="loginSignupBtn">
+                    <a class="border" href="login.php">Login</a>
+                    <a class="simple" href="signup.html">Sign up</a>
+                </div>
+            </form>
+
+            <footer class="footer">
+                <p>We no longer support login via Social accounts. To recover your old accounts please <a href="#">click here</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

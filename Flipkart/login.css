@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.mainLogin{
+    background-color: white;
+    position:absolute;
+    width: 800px;
+    top: 25%;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.13);
+    font-family:unset;
+    font-size:unset;
+    font-weight:unset;
+    line-height:unset;
+    color:unset;
+    text-align:unset ;
+}
+.img{
+    width: 343px;
+    height: 458px;
+}
+.rightLogin{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 25px;
+}
+.rightLogin .leaveLogin{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.rightLogin .leaveLogin span{
+    font-size:1.5rem;
+    padding: 10px 10px 0px 0px;
+    margin: 0;
+}
+.rightLogin .loginDesc{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.rightLogin .loginDesc h3{
+    font-size: 1.5rem;
+    padding-bottom: 2px;
+}
+.rightLogin .loginDesc p{
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+.rightLogin .form{
+    padding-bottom: 10px;
+}
+.rightLogin .login{
+    display: flex;
+    flex-direction: column;
+}
+.rightLogin .login p{
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+    color: rgba(17, 17, 17, 0.947);
+    margin-bottom: 0px;
+}
+.rightLogin .login input{
+    width: 80%;
+    padding: 7px 9px 7px 15px;
+    border-radius: 35px;
+    border: 1px solid #7f8c8d;
+    margin-bottom: 10px;
+}
+.rightLogin .login input::placeholder{
+    color:#7f8c8d;
+}
+.rightLogin .loginSignupBtn{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+.rightLogin .loginSignupBtn a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.rightLogin .loginSignupBtn .border{
+    width: 50%;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid #7f8c8d;
+    background-color: rgb(27, 27, 245);
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
+.rightLogin .loginSignupBtn .simple{
+    width: 50%;
+    padding: 6px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 1px solid #7f8c8d;
+    background-color: white;
+    color: rgb(27, 27, 245);
+    cursor: pointer;
+}
+.footer p{
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+.footer a{
+    color: mediumblue;
+}
